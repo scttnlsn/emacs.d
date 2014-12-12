@@ -21,7 +21,8 @@
 ;; modules
 (setq scttnlsn-modules
       '(scttnlsn-editor
-	scttnlsn-ui))
+        scttnlsn-git
+        scttnlsn-ui))
 
 (dolist (file scttnlsn-modules)
   (require file))
