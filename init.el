@@ -22,6 +22,7 @@
 (setq scttnlsn-modules
       '(scttnlsn-editor
         scttnlsn-git
+        scttnlsn-nav
         scttnlsn-ui))
 
 (dolist (file scttnlsn-modules)
