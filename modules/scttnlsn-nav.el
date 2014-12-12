@@ -9,6 +9,7 @@
 (package-require 'helm)
 (package-require 'helm-projectile)
 (package-require 'helm-descbinds)
+(require 'helm-config)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
