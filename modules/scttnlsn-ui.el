@@ -19,7 +19,6 @@
 (package-require 'solarized-theme)
 
 (setq dark-theme 'solarized-dark)
-(setq light-theme 'soliarized-light)
 (setq light-theme 'solarized-light)
 (setq current-theme dark-theme)
 
@@ -30,9 +29,9 @@
   (if (eq current-theme dark-theme)
       (setq current-theme light-theme)
       (setq current-theme dark-theme))
-  (load-theme current-theme))
+  (load-theme current-theme t))
 
 ;; font
-(set-default-font "M+ 1mn-14")
+(set-frame-font "M+ 1mn-14")
 
 (provide 'scttnlsn-ui)
