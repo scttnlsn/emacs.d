@@ -34,4 +34,7 @@
 ;; font
 (set-frame-font "M+ 1mn-14")
 
+;; keybindings
+(global-set-key (kbd "M-RET") 'toggle-frame-fullscreen)
+
 (provide 'scttnlsn-ui)
