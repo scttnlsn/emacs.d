@@ -20,6 +20,7 @@
 
 (setq dark-theme 'solarized-dark)
 (setq light-theme 'soliarized-light)
+(setq light-theme 'solarized-light)
 (setq current-theme dark-theme)
 
 (load-theme current-theme t)
