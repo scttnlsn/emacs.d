@@ -9,6 +9,7 @@
 (package-require 'helm)
 (package-require 'helm-projectile)
 (package-require 'helm-descbinds)
+(package-require 'helm-git-grep)
 (require 'helm-config)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -31,6 +32,12 @@
 (helm-descbinds-mode)
 (helm-mode 1)
 (helm-projectile-on)
+
+;; the default helm prefix is too similar to "C-x C-c"
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
+
+(define-key helm-command-map (kbd "g") 'helm-git-grep)
 
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
