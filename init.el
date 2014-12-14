@@ -9,6 +9,9 @@
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Use shift + arrows to change windows
+(windmove-default-keybindings)
+
 ;; Add .emacs.d/modules to load-path
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
