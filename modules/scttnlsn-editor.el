@@ -47,4 +47,7 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
+;; autocomplete
+(global-set-key [C-tab] 'hippie-expand)
+
 (provide 'scttnlsn-editor)
