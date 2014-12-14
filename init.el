@@ -43,3 +43,6 @@
 
 (dolist (file scttnlsn-modules)
   (require file))
+
+;; misc packages
+(package-require 'markdown-mode)
