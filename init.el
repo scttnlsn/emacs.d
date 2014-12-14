@@ -31,10 +31,15 @@
 
 ;; modules
 (setq scttnlsn-modules
-      '(scttnlsn-editor
-        scttnlsn-git
+      '(scttnlsn-ui
+        scttnlsn-editor
         scttnlsn-nav
-        scttnlsn-ui))
+
+        scttnlsn-clojure
+        scttnlsn-git
+        scttnlsn-js
+        scttnlsn-ruby
+        scttnlsn-web))
 
 (dolist (file scttnlsn-modules)
   (require file))
