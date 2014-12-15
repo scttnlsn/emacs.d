@@ -6,8 +6,9 @@
 (setq inhibit-startup-screen t)
 
 ;; nice scrolling
-(setq scroll-margin 0
-      scroll-conservatively 100000
+(setq scroll-step 1
+      scroll-margin 0
+      ;scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
 ;; mode line settings
