@@ -29,6 +29,9 @@
 ;; set cursor to vertical bar
 (set-default 'cursor-type 'bar)
 
+;; typed text replaces selection
+(delete-selection-mode 1)
+
 ;; comments
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the region or the current line if there's no active region."
