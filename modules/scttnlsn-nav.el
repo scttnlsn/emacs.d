@@ -3,7 +3,7 @@
 
 (projectile-global-mode)
 
-(global-set-key (kbd "C-c C-f") 'projectile-find-file)
+(global-set-key (kbd "s-p") 'projectile-command-map)
 
 ;; helm
 (package-require 'helm)
