@@ -32,8 +32,8 @@
         scttnlsn-editor
         scttnlsn-nav
 
-        scttnlsn-clojure
         scttnlsn-git
+        scttnlsn-lisp
         scttnlsn-js
         scttnlsn-ruby
         scttnlsn-web))
