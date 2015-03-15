@@ -1,5 +1,7 @@
 (package-require 'web-mode)
 (package-require 'less-css-mode)
+(package-require 'stylus-mode)
+(package-require 'jade-mode)
 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
