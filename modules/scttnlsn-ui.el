@@ -17,11 +17,11 @@
 (size-indication-mode t)
 
 ;; theme
-(package-require 'solarized-theme)
+(package-require 'color-theme-sanityinc-tomorrow)
 
-(setq dark-theme 'solarized-dark)
-(setq light-theme 'solarized-light)
-(setq current-theme dark-theme)
+(setq dark-theme 'sanityinc-tomorrow-night)
+(setq light-theme 'sanityinc-tomorrow-day)
+(setq current-theme light-theme)
 
 (load-theme current-theme t)
 
