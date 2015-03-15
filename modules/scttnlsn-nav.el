@@ -21,9 +21,11 @@
 (global-set-key (kbd "C-h r") 'helm-info-emacs)
 (global-set-key (kbd "C-h C-l") 'helm-locate-library)
 (global-set-key (kbd "C-c f") 'helm-recentf)
+(global-set-key (kbd "C-c h o") 'helm-occur)
 
 (setq helm-split-window-in-side-p t
       helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match t
       helm-move-to-line-cycle-in-source t
       helm-ff-search-library-in-sexp t
       helm-ff-file-name-history-use-recentf t)
@@ -38,6 +40,10 @@
 (global-unset-key (kbd "C-x c"))
 
 (define-key helm-command-map (kbd "g") 'helm-git-grep)
+
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to do persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
