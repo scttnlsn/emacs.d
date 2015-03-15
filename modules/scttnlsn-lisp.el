@@ -3,6 +3,7 @@
 (package-require 'cljsbuild-mode)
 (package-require 'paredit)
 (package-require 'smartparens)
+(package-require 'aggressive-indent)
 
 ;; all lisps
 (let ((lisp-hooks '(emacs-lisp-mode-hook
@@ -24,8 +25,10 @@
 
 ;; elisp
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 
 ;; clojure
+(add-hook 'clojure-mode-hook 'aggressive-indent-mode)
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-repl-mode-hook 'subword-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
