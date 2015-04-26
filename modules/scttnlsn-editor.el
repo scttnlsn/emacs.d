@@ -46,6 +46,7 @@
     (comment-or-uncomment-region beg end)))
 
 (global-set-key (kbd "C-x /") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
 
 ;; search
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
