@@ -2,5 +2,6 @@ elpa/
 auto-save-list/
 eshell/
 projectile-bookmarks.eld
+projectile.cache
 recentf
 cider-history

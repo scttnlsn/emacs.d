@@ -2,6 +2,7 @@
 (package-require 'projectile)
 
 (projectile-global-mode)
+(add-to-list 'projectile-globally-ignored-directories "node_modules")
 
 (global-set-key (kbd "s-p") 'projectile-command-map)
 
