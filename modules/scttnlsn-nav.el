@@ -49,4 +49,9 @@
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; neotree
+(package-require 'neotree)
+(setq neo-theme 'ascii)
+(global-set-key (kbd "C-c t") 'neotree-toggle)
+
 (provide 'scttnlsn-nav)
