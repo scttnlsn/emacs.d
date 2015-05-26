@@ -43,3 +43,4 @@
 
 ;; misc packages
 (package-require 'markdown-mode)
+(package-require 'yaml-mode)
