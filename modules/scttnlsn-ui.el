@@ -39,7 +39,7 @@
 (add-hook 'window-setup-hook 'on-after-init)
 
 ;; font
-(set-frame-font "M+ 1mn-14")
+(set-face-attribute 'default nil :font "Monaco 14")
 
 ;; keybindings
 (global-set-key (kbd "M-RET") 'toggle-frame-fullscreen)
