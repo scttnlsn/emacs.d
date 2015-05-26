@@ -12,4 +12,7 @@
 
 (setq ruby-deep-indent-paren nil)
 
+(add-hook 'rspec-compilation-mode-hook
+          (lambda () (setq truncate-lines nil)))
+
 (provide 'scttnlsn-ruby)

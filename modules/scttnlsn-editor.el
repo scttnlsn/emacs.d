@@ -15,6 +15,9 @@
 (prefer-coding-system 'utf-8)
 (load-library "iso-transl")
 
+;; truncate lines by default
+(set-default 'truncate-lines t)
+
 ;; whitespace
 (package-require 'whitespace)
 (setq-default show-trailing-whitespace t)
