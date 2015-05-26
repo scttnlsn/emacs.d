@@ -118,4 +118,14 @@
 (global-set-key (kbd "C-x -") 'toggle-window-split)
 (global-set-key (kbd "C-x C--") 'rotate-windows)
 
+;; misc.
+(package-require 'helm-dash)
+(global-set-key (kbd "C-c d") 'helm-dash-at-point)
+
+(global-set-key (kbd "C-c a") 'align-regexp)
+
+(defun close-all-buffers ()
+  (interactive)
+  (mapc 'kill-buffer (buffer-list)))
+
 (provide 'scttnlsn-editor)
