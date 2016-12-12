@@ -44,3 +44,11 @@
 ;; misc packages
 (package-require 'markdown-mode)
 (package-require 'yaml-mode)
+
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (setq truncate-lines nil)))
+
+(add-hook 'sh-mode-hook
+          (lambda ()
+            (setq sh-basic-offset 2)))
