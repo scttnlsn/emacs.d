@@ -8,7 +8,7 @@
 ;; nice scrolling
 (setq scroll-step 1
       scroll-margin 0
-      ;scroll-conservatively 100000
+      scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
 ;; mode line settings
@@ -21,7 +21,7 @@
 
 (setq dark-theme 'sanityinc-tomorrow-night)
 (setq light-theme 'sanityinc-tomorrow-day)
-(setq current-theme light-theme)
+(setq current-theme dark-theme)
 
 (load-theme current-theme t)
 
@@ -29,7 +29,7 @@
   (interactive)
   (if (eq current-theme dark-theme)
       (setq current-theme light-theme)
-      (setq current-theme dark-theme))
+    (setq current-theme dark-theme))
   (load-theme current-theme t))
 
 (defun on-after-init ()
@@ -39,7 +39,7 @@
 (add-hook 'window-setup-hook 'on-after-init)
 
 ;; font
-(set-face-attribute 'default nil :font "Monaco 14")
+(set-face-attribute 'default nil :font "Hack 14")
 
 ;; keybindings
 (global-set-key (kbd "M-RET") 'toggle-frame-fullscreen)

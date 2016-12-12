@@ -63,6 +63,10 @@
 (global-set-key [C-tab] 'company-complete-common)
 
 ;; window movement
+(package-require 'golden-ratio)
+
+(global-set-key (kbd "C-c g") 'golden-ratio)
+
 (global-set-key (kbd "C-c <left>") 'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>") 'windmove-up)
