@@ -18,7 +18,7 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -36,7 +36,8 @@
         scttnlsn-lisp
         scttnlsn-js
         scttnlsn-ruby
-        scttnlsn-web))
+        scttnlsn-web
+        scttnlsn-mail))
 
 (dolist (file scttnlsn-modules)
   (require file))

@@ -23,6 +23,8 @@
 (setq-default show-trailing-whitespace t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'term-mode-hook (lambda () (setq show-trailing-whitespace nil)))
+(add-hook 'eww-mode-hook (lambda () (setq show-trailing-whitespace nil)))
+(add-hook 'mu4e-view-mode-hook (lambda () (setq show-trailing-whitespace nil)))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
