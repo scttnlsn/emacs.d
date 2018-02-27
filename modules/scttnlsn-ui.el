@@ -21,7 +21,7 @@
 
 (setq dark-theme 'sanityinc-tomorrow-night)
 (setq light-theme 'sanityinc-tomorrow-day)
-(setq current-theme dark-theme)
+(setq current-theme light-theme)
 
 (load-theme current-theme t)
 
@@ -39,7 +39,7 @@
 (add-hook 'window-setup-hook 'on-after-init)
 
 ;; font
-(set-face-attribute 'default nil :font "Hack 14")
+(set-face-attribute 'default nil :font "Hack 11")
 
 ;; keybindings
 (global-set-key (kbd "M-RET") 'toggle-frame-fullscreen)
