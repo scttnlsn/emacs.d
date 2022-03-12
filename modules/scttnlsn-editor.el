@@ -1,3 +1,5 @@
+(cua-mode t)
+
 ;; disable autosave and locking
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -23,8 +25,6 @@
 (setq-default show-trailing-whitespace t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'term-mode-hook (lambda () (setq show-trailing-whitespace nil)))
-(add-hook 'eww-mode-hook (lambda () (setq show-trailing-whitespace nil)))
-(add-hook 'mu4e-view-mode-hook (lambda () (setq show-trailing-whitespace nil)))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -122,16 +122,35 @@
              (setq i (1+ i)))))))
 
 (global-set-key (kbd "C-x -") 'toggle-window-split)
-(global-set-key (kbd "C-x C--") 'rotate-windows)
+(global-set-key (kbd "C-x C-\\") 'rotate-windows)
+
+;; multiple cursors
+(package-require 'multiple-cursors)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; misc.
 (package-require 'helm-dash)
 (global-set-key (kbd "C-c d") 'helm-dash-at-point)
+(global-set-key (kbd "C-z") 'undo)
 
 (global-set-key (kbd "C-c a") 'align-regexp)
+
+(package-require 'which-key)
+(which-key-mode)
 
 (defun close-all-buffers ()
   (interactive)
   (mapc 'kill-buffer (buffer-list)))
+
+(global-set-key (kbd "C-c ca") 'close-all-buffers)
+
+;; (defun copy-filename ()
+;;   "Copy the full path of the current buffer."
+;;   (interactive)
+;;   (kill-new (buffer-file-name (window-buffer (minibuffer-selected-window)))))
+
+;; (global-set-key (kbd "M-c") 'copy-filename)
 
 (provide 'scttnlsn-editor)

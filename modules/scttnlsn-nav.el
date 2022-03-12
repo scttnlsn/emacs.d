@@ -1,8 +1,12 @@
 ;; projectile
 (package-require 'projectile)
 
+(setq projectile-keymap-prefix (kbd "C-c p"))
 (projectile-global-mode)
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
+(add-to-list 'projectile-globally-ignored-directories "tmp")
+(add-to-list 'projectile-globally-ignored-directories "log")
+(add-to-list 'projectile-globally-ignored-directories "__pycache__")
 
 (global-set-key (kbd "s-p") 'projectile-command-map)
 
@@ -36,6 +40,10 @@
 (helm-mode 1)
 (helm-projectile-on)
 
+;; skip helm completion for dired
+(add-to-list 'helm-completing-read-handlers-alist
+             '(dired . nil))
+
 ;; the default helm prefix is too similar to "C-x C-c"
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
@@ -53,5 +61,9 @@
 (package-require 'neotree)
 (setq neo-theme 'ascii)
 (global-set-key (kbd "C-c t") 'neotree-toggle)
+(with-eval-after-load 'neotree
+  (setq neo-hidden-regexp-list
+        '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "\\.o$" ;; defaults
+          "__pycache__")))
 
 (provide 'scttnlsn-nav)

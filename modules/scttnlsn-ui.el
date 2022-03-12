@@ -19,9 +19,10 @@
 ;; theme
 (package-require 'color-theme-sanityinc-tomorrow)
 
-(setq dark-theme 'sanityinc-tomorrow-night)
+;; (setq dark-theme 'sanityinc-tomorrow-night)
+(setq dark-theme 'nord)
 (setq light-theme 'sanityinc-tomorrow-day)
-(setq current-theme light-theme)
+(setq current-theme dark-theme)
 
 (load-theme current-theme t)
 
@@ -40,8 +41,5 @@
 
 ;; font
 (set-face-attribute 'default nil :font "Hack 11")
-
-;; keybindings
-(global-set-key (kbd "M-RET") 'toggle-frame-fullscreen)
 
 (provide 'scttnlsn-ui)
